@@ -15,7 +15,7 @@ export const profile = {
   available: true,
   about: "Étudiant en 1ʳᵉ année du cycle ingénieur en Big Data & Cloud Computing à l\'ENSET Mohammedia. Titulaire d\'une licence en bases de données et développement. Passionné par l\'intelligence artificielle et l\'analyse de données — je recherche un stage pour contribuer à des projets concrets et innovants.",
   stats: [
-    { n: 5,  suffix: "+", label: "Projets"     },
+    { n: 7,  suffix: "+", label: "Projets"     },
     { n: 3,  suffix: "",  label: "Langues"      },
     { n: 10, suffix: "+", label: "Technologies" },
   ],
@@ -30,9 +30,9 @@ export const formation = [
 
 export const skills = {
   "Langages":          ["Python","Java","JavaScript","PHP","C","HTML/CSS"],
-  "IA & Data Science": ["Machine Learning","PyTorch","OpenCV","Dlib","Q-Learning","DQN","QMIX"],
+  "IA & Data Science": ["Machine Learning","PyTorch","OpenCV","Pandas","","numpy","matplotlib" , "seaborn"],
   "Backend & BDD":     ["J2EE","API REST","MySQL","Oracle","Java Swing"],
-  "DevOps & Outils":   ["Git","GitHub","SUMO"],
+  "DevOps & Outils":   ["Git","GitHub"],
   "Soft Skills":       ["Résolution de problèmes","Travail en équipe","Apprentissage rapide"],
 };
 
@@ -46,16 +46,20 @@ export const skillColors = {
 
 export const projects = [
   { title:"Optimisation feux de circulation",   desc:"Algorithmes intelligents (Q-Learning, DQN, QMIX) pour optimiser les feux via simulations SUMO et PyTorch.", tags:["PyTorch","Q-Learning","DQN","SUMO"], year:"2024" },
-  { title:"Détection de genre — Vision",        desc:"Modèle de vision par ordinateur identifiant le genre d\'une personne à partir d\'images faciales.",        tags:["OpenCV","Dlib","Python"],            year:"2023" },
+  { title:"FRS-Face-Recognition-System",        desc:"A comprehensive face recognition system built with Python, dlib, and OpenCV. This project implements real-time face detection and recognition capabilities, designed for attendance tracking and presence management systems..",        tags:["OpenCV","Dlib","Python"],            year:"2023" },
   { title:"App Restaurant Java",                desc:"Gestion des plats, génération de factures, notifications e-mail et chatbot intégré.",                         tags:["Java Swing","SMTP","Chatbot"],       year:"2023" },
   { title:"Détection inondations",              desc:"Système intelligent d\'alerte précoce basé sur l\'analyse de données environnementales.",                    tags:["Python","ML","Data Analysis"],       year:"2023" },
-  { title:"Gestion sécurisée de données",       desc:"Application sécurisée avec authentification et chiffrement pour données sensibles.",                          tags:["Authentification","Chiffrement","BDD"],year:"2022"},
+  { title:"Coffre-fort numérique sécurisé",       desc:"application web qui chiffre des messages avec AES-256 et les cache dans des images grâce à la stéganographie LSB, puis permet de les extraire, les déchiffrer et d’évaluer la qualité de l’image avec MSE et PSNR.",                          tags:["Python","Streamlit","numpy" , "Pillow"],year:"2026"},
+   { title:"Élégance Émiratie — Site Web Complet",       desc:"Site web multi-pages pour une maison de haute couture émiratie fictive.Construit en HTML5 /CSS3 JavaScript vanilla — aucun framework requis",                          tags:["HTML5","CSS3", "JavaScript"],year:"2024"},
 ];
+
+
 
 export const languages = [
   { lang:"Arabe",    level:"Langue maternelle",   score:5 },
+   { lang:"Anglais",  level:"Bon niveau technique", score:4 },
   { lang:"Français", level:"Bon niveau technique", score:4 },
-  { lang:"Anglais",  level:"Bon niveau technique", score:4 },
+ 
 ];
 
 export const activities = [
