@@ -45,12 +45,12 @@ export const skillColors = {
 };
 
 export const projects = [
-  { title:"Optimisation feux de circulation",   desc:"Algorithmes intelligents (Q-Learning, DQN, QMIX) pour optimiser les feux via simulations SUMO et PyTorch.", tags:["PyTorch","Q-Learning","DQN","SUMO"], year:"2024" },
-  { title:"FRS-Face-Recognition-System",        desc:"A comprehensive face recognition system built with Python, dlib, and OpenCV. This project implements real-time face detection and recognition capabilities, designed for attendance tracking and presence management systems..",        tags:["OpenCV","Dlib","Python"],            year:"2023" },
-  { title:"App Restaurant Java",                desc:"Gestion des plats, génération de factures, notifications e-mail et chatbot intégré.",                         tags:["Java Swing","SMTP","Chatbot"],       year:"2023" },
-  { title:"Détection inondations",              desc:"Système intelligent d\'alerte précoce basé sur l\'analyse de données environnementales.",                    tags:["Python","ML","Data Analysis"],       year:"2023" },
-  { title:"Coffre-fort numérique sécurisé",       desc:"application web qui chiffre des messages avec AES-256 et les cache dans des images grâce à la stéganographie LSB, puis permet de les extraire, les déchiffrer et d’évaluer la qualité de l’image avec MSE et PSNR.",                          tags:["Python","Streamlit","numpy" , "Pillow"],year:"2026"},
-   { title:"Élégance Émiratie — Site Web Complet",       desc:"Site web multi-pages pour une maison de haute couture émiratie fictive.Construit en HTML5 /CSS3 JavaScript vanilla — aucun framework requis",                          tags:["HTML5","CSS3", "JavaScript"],year:"2024"},
+  { title:"Optimisation feux de circulation",   desc:"Algorithmes intelligents (Q-Learning, DQN, QMIX) pour optimiser les feux via simulations SUMO et PyTorch.", tags:["PyTorch","Q-Learning","DQN","SUMO"],repo:"https://github.com/nj-ysf" ,  year:"2024" },
+  { title:"FRS-Face-Recognition-System",        desc:"A comprehensive face recognition system built with Python, dlib, and OpenCV. This project implements real-time face detection and recognition capabilities, designed for attendance tracking and presence management systems..",        tags:["OpenCV","Dlib","Python" ] ,repo:"https://github.com/nj-ysf",            year:"2023" },
+  { title:"App Restaurant Java",                desc:"Gestion des plats, génération de factures, notifications e-mail et chatbot intégré.",                         tags:["Java Swing","SMTP","Chatbot"],     repo:"https://github.com/nj-ysf"  ,   year:"2023" },
+  { title:"Détection inondations",              desc:"Système intelligent d\'alerte précoce basé sur l\'analyse de données environnementales.",                    tags:["Python","ML","Data Analysis"],    repo:"https://github.com/nj-ysf" ,    year:"2023" },
+  { title:"Coffre-fort numérique sécurisé",       desc:"application web qui chiffre des messages avec AES-256 et les cache dans des images grâce à la stéganographie LSB, puis permet de les extraire, les déchiffrer et d’évaluer la qualité de l’image avec MSE et PSNR.",                          tags:["Python","Streamlit","numpy" , "Pillow"],repo:"https://github.com/nj-ysf",year:"2026"},
+   { title:"Élégance Émiratie — Site Web Complet",       desc:"Site web multi-pages pour une maison de haute couture émiratie fictive.Construit en HTML5 /CSS3 JavaScript vanilla — aucun framework requis",                          tags:["HTML5","CSS3", "JavaScript"], repo:"https://github.com/nj-ysf" ,year:"2024"},
 ];
 
 
