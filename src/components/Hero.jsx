@@ -2,7 +2,6 @@ import { useState, useEffect, useRef } from "react";
 import { FadeIn, Counter, PrimaryBtn, GhostBtn } from "./UI";
 import { useTypewriter } from "../hooks/useAnimations";
 import { profile, PHOTO } from "../data/portfolio";
-import Contact from './Contact';
 
 function useMouseGlow() {
   const ref = useRef(null);
@@ -41,7 +40,7 @@ export default function Hero() {
       <div style={{ position:"relative", zIndex:1, width:"100%", maxWidth:1040, margin:"0 auto", display:"grid", gridTemplateColumns:"1fr auto", gap:"4rem", alignItems:"center" }}>
 
         {/* Left */}
-        <div> 
+        <div>
           <FadeIn>
             <div role="status" style={{ display:"inline-flex", alignItems:"center", gap:".5rem", background:"rgba(52,211,153,.08)", border:"1px solid rgba(52,211,153,.22)", color:"#34d399", fontSize:".7rem", fontWeight:700, padding:".32rem .95rem", borderRadius:"99px", fontFamily:"var(--font-mono)", letterSpacing:".07em", marginBottom:"1.75rem" }}>
               <span style={{ width:6, height:6, borderRadius:"50%", background:"#34d399", display:"inline-block", animation:"pulse 2s infinite" }} />
@@ -69,7 +68,10 @@ export default function Hero() {
           <FadeIn delay={280}>
             <div style={{ display:"flex", gap:".85rem", flexWrap:"wrap", marginBottom:"3rem" }}>
               <PrimaryBtn href="#projects">Voir mes projets</PrimaryBtn>
-      
+              <GhostBtn href="/cv-naji-youssef.pdf" download="CV-Naji-Youssef.pdf">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="14" height="14" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                Télécharger le CV
+              </GhostBtn>
               <GhostBtn href="#contact">Me contacter</GhostBtn>
             </div>
           </FadeIn>

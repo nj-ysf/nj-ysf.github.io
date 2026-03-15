@@ -59,10 +59,10 @@ export function PrimaryBtn({ href, children }) {
 }
 
 /* ── Ghost button (blue → gold on hover) ───────────────────────── */
-export function GhostBtn({ href, children, external=false, onClick }) {
+export function GhostBtn({ href, children, external=false, onClick, download }) {
   const [h, setH] = useState(false);
   const Tag = href ? "a" : "button";
-  const extra = href ? { href, target:external?"_blank":undefined, rel:external?"noopener noreferrer":undefined } : { onClick };
+  const extra = href ? { href, target:external?"_blank":undefined, rel:external?"noopener noreferrer":undefined, download:download||undefined } : { onClick };
   return (
     <Tag {...extra} style={{ display:"inline-flex", alignItems:"center", gap:".5rem", fontFamily:"var(--font-mono)", fontSize:".72rem", fontWeight:500, letterSpacing:".07em", textTransform:"uppercase", color:h?"var(--gold-light)":"var(--accent)", background:h?"rgba(201,168,76,.06)":"rgba(56,189,248,.06)", border:`1px solid ${h?"rgba(201,168,76,.4)":"rgba(56,189,248,.25)"}`, padding:".6rem 1.25rem", borderRadius:"var(--radius-sm)", textDecoration:"none", cursor:"pointer", transition:"all .3s", transform:h?"translateY(-1px)":"none", boxShadow:h?"0 4px 20px rgba(201,168,76,.15)":"none" }}
       onMouseEnter={()=>setH(true)} onMouseLeave={()=>setH(false)}

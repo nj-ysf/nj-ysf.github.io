@@ -51,6 +51,7 @@ export const projects = [
   { title:"Détection inondations",              desc:"Système intelligent d\'alerte précoce basé sur l\'analyse de données environnementales.",                    tags:["Python","ML","Data Analysis"],    repo:"https://github.com/nj-ysf" ,    year:"2023" },
   { title:"Coffre-fort numérique sécurisé",       desc:"application web qui chiffre des messages avec AES-256 et les cache dans des images grâce à la stéganographie LSB, puis permet de les extraire, les déchiffrer et d’évaluer la qualité de l’image avec MSE et PSNR.",                          tags:["Python","Streamlit","numpy" , "Pillow"],repo:"https://github.com/nj-ysf",year:"2026"},
    { title:"Élégance Émiratie — Site Web Complet",       desc:"Site web multi-pages pour une maison de haute couture émiratie fictive.Construit en HTML5 /CSS3 JavaScript vanilla — aucun framework requis",                          tags:["HTML5","CSS3", "JavaScript"], repo:"https://github.com/nj-ysf" ,year:"2024"},
+   { title:"ML_learning projects",       desc:"Un ensemble de mini-projets visant à appliquer les concepts fondamentaux du Machine Learning.",                          tags:["Linear Regression","Polynomial Regression", "Logistic Regression" , "K-Nearest Neighbors (KNN)" , "Support Vector Machine (SVM)" , "Decision Tree"], repo:"https://github.com/nj-ysf/ML_learning" ,year:"2026"},
 ];
 
 
