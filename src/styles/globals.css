@@ -99,3 +99,73 @@ body {
   background-clip: text;
   animation: shimmer 4s linear infinite;
 }
+
+/* ═══════════════════════════════════════════════
+   RESPONSIVE — Mobile & Tablet
+   ═══════════════════════════════════════════════ */
+
+/* Section wrapper padding */
+@media (max-width: 768px) {
+  .section-wrap { padding: 4rem 1.5rem; }
+}
+@media (max-width: 540px) {
+  .section-wrap { padding: 3rem 1.25rem; }
+}
+
+/* ── Hero ── */
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 4rem;
+  align-items: center;
+  width: 100%;
+  max-width: 1040px;
+  margin: 0 auto;
+}
+.hero-photo-outer { position: relative; flex-shrink: 0; }
+
+@media (max-width: 640px) {
+  .hero-grid {
+    grid-template-columns: 1fr !important;
+    gap: 2rem;
+  }
+  .hero-photo-outer {
+    display: flex;
+    justify-content: center;
+    order: -1;
+  }
+  .hero-photo-outer > div {
+    width: 160px !important;
+    height: 160px !important;
+  }
+  .hero-cta  { justify-content: center !important; }
+  .hero-stats { justify-content: center !important; }
+}
+
+/* ── Contact bubbles ── */
+@media (max-width: 480px) {
+  .bubble-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+  }
+}
+
+/* ── Footer ── */
+@media (max-width: 480px) {
+  .footer-inner {
+    flex-direction: column !important;
+    text-align: center;
+    gap: .75rem;
+  }
+  .footer-nav {
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: .75rem 1.25rem;
+  }
+}
+
+/* ── Section headings on mobile ── */
+@media (max-width: 540px) {
+  .section-wrap h2 {
+    font-size: clamp(1.5rem, 7vw, 2.4rem) !important;
+  }
+}

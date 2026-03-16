@@ -155,7 +155,7 @@ export default function Contact() {
 
         {/* ── Bubble icons grid ── */}
         <FadeIn delay={80}>
-          <div style={{
+          <div className="bubble-grid" style={{
             display: "grid",
             gridTemplateColumns: "repeat(6, 1fr)",
             gap: ".5rem",
