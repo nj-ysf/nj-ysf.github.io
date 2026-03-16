@@ -2,7 +2,9 @@ import { useState, useEffect, useRef } from "react";
 import { FadeIn, Counter, PrimaryBtn, GhostBtn } from "./UI";
 import { useTypewriter } from "../hooks/useAnimations";
 import { profile, PHOTO } from "../data/portfolio";
-import introVideo from "../assets/intro.mp4";
+// import introVideo from "../assets/intro.mp4";
+import introVideo from "C:/Users/dell/Downloads/naji-portfolio/public/intro.mp4";
+
 
 function useMouseGlow() {
   const ref = useRef(null);
@@ -29,16 +31,6 @@ export default function Hero() {
       style={{ minHeight:"100vh", display:"flex", alignItems:"center", padding:"80px clamp(1.5rem,6vw,4.5rem) 5rem", position:"relative", overflow:"hidden" }}>
 
       {/* Video background */}
-      {/* <video
-        autoPlay muted loop playsInline
-        aria-hidden="true"
-        style={{ position:"absolute", inset:0, width:"100%", height:"100%", objectFit:"cover", opacity:.1, zIndex:0, pointerEvents:"none" }}
-      >
-        <source src={introVideo} type="video/mp4" />
-      </video> */}
-      
-      {/*  */}
-
 <video
   autoPlay
   muted
