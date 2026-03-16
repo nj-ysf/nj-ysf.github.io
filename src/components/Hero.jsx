@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { FadeIn, Counter, PrimaryBtn, GhostBtn } from "./UI";
 import { useTypewriter } from "../hooks/useAnimations";
 import { profile, PHOTO } from "../data/portfolio";
+import introVideo from "../assets/intro.mp4";
 
 function useMouseGlow() {
   const ref = useRef(null);
@@ -27,6 +28,40 @@ export default function Hero() {
     <section id="about" aria-labelledby="hero-name" ref={glowRef}
       style={{ minHeight:"100vh", display:"flex", alignItems:"center", padding:"80px clamp(1.5rem,6vw,4.5rem) 5rem", position:"relative", overflow:"hidden" }}>
 
+      {/* Video background */}
+      {/* <video
+        autoPlay muted loop playsInline
+        aria-hidden="true"
+        style={{ position:"absolute", inset:0, width:"100%", height:"100%", objectFit:"cover", opacity:.1, zIndex:0, pointerEvents:"none" }}
+      >
+        <source src={introVideo} type="video/mp4" />
+      </video> */}
+      
+      {/*  */}
+
+<video
+  autoPlay
+  muted
+  loop
+  playsInline
+  aria-hidden="true"
+  style={{
+    position: "absolute",
+    top: 0,
+    left: 0,
+    width: "100%",
+    height: "100%",
+    objectFit: "cover",
+    opacity: 0.5,
+    zIndex: -1
+  }}
+>
+  <source src={introVideo} type="video/mp4" />
+</video>
+
+      {/* Dark overlay */}
+      <div aria-hidden="true" style={{ position:"absolute", inset:0, background:"linear-gradient(135deg,rgba(5,8,16,.88) 0%,rgba(5,8,16,.7) 100%)", zIndex:0, pointerEvents:"none" }} />
+
       {/* Dynamic cursor-following glow */}
       <div aria-hidden="true" style={{ position:"absolute", inset:0, background:`radial-gradient(600px circle at ${mouse.x}% ${mouse.y}%, rgba(56,189,248,.06) 0%, transparent 60%)`, pointerEvents:"none", transition:"background .1s" }} />
 
@@ -37,7 +72,7 @@ export default function Hero() {
       {/* Grid */}
       <div aria-hidden="true" style={{ position:"absolute", inset:0, backgroundImage:"linear-gradient(rgba(56,189,248,.03) 1px,transparent 1px),linear-gradient(90deg,rgba(56,189,248,.03) 1px,transparent 1px)", backgroundSize:"60px 60px", maskImage:"radial-gradient(ellipse 80% 65% at 50% 35%,black 10%,transparent 100%)" }} />
 
-      <div style={{ position:"relative", zIndex:1, width:"100%", maxWidth:1040, margin:"0 auto", display:"grid", gridTemplateColumns:"1fr auto", gap:"4rem", alignItems:"center" }}>
+      <div className="hero-grid" style={{ position:"relative", zIndex:2 }}>
 
         {/* Left */}
         <div>
@@ -66,7 +101,7 @@ export default function Hero() {
           </FadeIn>
 
           <FadeIn delay={280}>
-            <div style={{ display:"flex", gap:".85rem", flexWrap:"wrap", marginBottom:"3rem" }}>
+            <div className="hero-cta" style={{ display:"flex", gap:".85rem", flexWrap:"wrap", marginBottom:"3rem" }}>
               <PrimaryBtn href="#projects">Voir mes projets</PrimaryBtn>
               <GhostBtn href="/cv-naji-youssef.pdf" download="CV-Naji-Youssef.pdf">
                 <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" width="14" height="14" aria-hidden="true"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
@@ -77,7 +112,7 @@ export default function Hero() {
           </FadeIn>
 
           <FadeIn delay={360}>
-            <div style={{ display:"flex", gap:"3rem", flexWrap:"wrap", paddingTop:"2rem", borderTop:"1px solid rgba(56,189,248,.08)" }}>
+            <div className="hero-stats" style={{ display:"flex", gap:"3rem", flexWrap:"wrap", paddingTop:"2rem", borderTop:"1px solid rgba(56,189,248,.08)" }}>
               {profile.stats.map(s => (
                 <div key={s.label}>
                   <div style={{ fontFamily:"var(--font-display)", fontWeight:800, fontSize:"2.1rem", background:"linear-gradient(135deg,#38bdf8,#c9a84c)", WebkitBackgroundClip:"text", WebkitTextFillColor:"transparent", backgroundClip:"text", lineHeight:1 }}>
@@ -92,7 +127,7 @@ export default function Hero() {
 
         {/* Right — photo */}
         <FadeIn delay={160}>
-          <div style={{ position:"relative", flexShrink:0 }}
+          <div className="hero-photo-outer" style={{ position:"relative", flexShrink:0 }}
             onMouseEnter={()=>setPhotoHover(true)} onMouseLeave={()=>setPhotoHover(false)}>
             {/* Outer glow ring — shifts blue→gold on hover */}
             <div aria-hidden="true" style={{ position:"absolute", inset:"-14px", borderRadius:"50%", background:photoHover?"conic-gradient(from 0deg,#c9a84c,#f0c96e,#c9a84c)":"conic-gradient(from 0deg,#38bdf8,#0ea5e9,#818cf8,#38bdf8)", animation:"spin 6s linear infinite", opacity:.5, filter:"blur(2px)", transition:"background .6s" }} />
@@ -109,5 +144,5 @@ export default function Hero() {
         </FadeIn>
       </div>
     </section>
-  );
+      );
 }

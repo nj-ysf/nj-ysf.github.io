@@ -3,7 +3,7 @@ import { useActiveSection } from "./hooks/useAnimations";
 import { NAV_IDS } from "./constants/nav";
 import Navbar    from "./components/Navbar";
 import Hero      from "./components/Hero";
-import Formation from "./components/Formation";
+import Formation  from "./components/Formation";
 import Skills    from "./components/Skills";
 import Projects  from "./components/Projects";
 import Contact   from "./components/Contact";
