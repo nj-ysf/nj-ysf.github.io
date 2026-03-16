@@ -4,6 +4,7 @@ import { useTypewriter } from "../hooks/useAnimations";
 import { profile, PHOTO } from "../data/portfolio";
 // import introVideo from "../assets/intro.mp4";
 import introVideo from "C:/Users/dell/Downloads/naji-portfolio/public/intro.mp4";
+import { useRef, useEffect } from "react";
 
 
 function useMouseGlow() {
