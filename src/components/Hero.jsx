@@ -2,9 +2,6 @@ import { useState, useEffect, useRef } from "react";
 import { FadeIn, Counter, PrimaryBtn, GhostBtn } from "./UI";
 import { useTypewriter } from "../hooks/useAnimations";
 import { profile, PHOTO } from "../data/portfolio";
-// import introVideo from "../assets/intro.mp4";
-import introVideo from "C:/Users/dell/Downloads/naji-portfolio/public/intro.mp4";
-import { useRef, useEffect } from "react";
 
 
 function useMouseGlow() {
@@ -28,7 +25,7 @@ export default function Hero() {
   const [photoHover, setPhotoHover] = useState(false);
 
   return (
-    <section id="about" aria-labelledby="hero-name" ref={glowRef}
+    <section id="about" className="hero-section" aria-labelledby="hero-name" ref={glowRef}
       style={{ minHeight:"100vh", display:"flex", alignItems:"center", padding:"80px clamp(1.5rem,6vw,4.5rem) 5rem", position:"relative", overflow:"hidden" }}>
 
       {/* Video background */}
@@ -49,7 +46,7 @@ export default function Hero() {
     zIndex: -1
   }}
 >
-  <source src={introVideo} type="video/mp4" />
+  <source src="/intro.mp4" type="video/mp4" />
 </video>
 
       {/* Dark overlay */}
@@ -123,10 +120,10 @@ export default function Hero() {
           <div className="hero-photo-outer" style={{ position:"relative", flexShrink:0 }}
             onMouseEnter={()=>setPhotoHover(true)} onMouseLeave={()=>setPhotoHover(false)}>
             {/* Outer glow ring — shifts blue→gold on hover */}
-            <div aria-hidden="true" style={{ position:"absolute", inset:"-14px", borderRadius:"50%", background:photoHover?"conic-gradient(from 0deg,#c9a84c,#f0c96e,#c9a84c)":"conic-gradient(from 0deg,#38bdf8,#0ea5e9,#818cf8,#38bdf8)", animation:"spin 6s linear infinite", opacity:.5, filter:"blur(2px)", transition:"background .6s" }} />
+            <div className="hero-photo-ring" aria-hidden="true" style={{ position:"absolute", inset:"-14px", borderRadius:"50%", background:photoHover?"conic-gradient(from 0deg,#c9a84c,#f0c96e,#c9a84c)":"conic-gradient(from 0deg,#38bdf8,#0ea5e9,#818cf8,#38bdf8)", animation:"spin 6s linear infinite", opacity:.5, filter:"blur(2px)", transition:"background .6s" }} />
 
             {/* Photo circle */}
-            <div style={{ width:"clamp(180px,23vw,265px)", height:"clamp(180px,23vw,265px)", borderRadius:"50%", overflow:"hidden", border:"3px solid transparent", background:photoHover?"linear-gradient(#050810,#050810) padding-box,linear-gradient(135deg,#c9a84c,#f0c96e) border-box":"linear-gradient(#050810,#050810) padding-box,linear-gradient(135deg,#38bdf8,#818cf8) border-box", position:"relative", transition:"background .5s", boxShadow:photoHover?"0 0 60px rgba(201,168,76,.25)":"0 0 60px rgba(56,189,248,.15)" }}>
+            <div className="hero-photo-frame" style={{ width:"clamp(180px,23vw,265px)", height:"clamp(180px,23vw,265px)", borderRadius:"50%", overflow:"hidden", border:"3px solid transparent", background:photoHover?"linear-gradient(#050810,#050810) padding-box,linear-gradient(135deg,#c9a84c,#f0c96e) border-box":"linear-gradient(#050810,#050810) padding-box,linear-gradient(135deg,#38bdf8,#818cf8) border-box", position:"relative", transition:"background .5s", boxShadow:photoHover?"0 0 60px rgba(201,168,76,.25)":"0 0 60px rgba(56,189,248,.15)" }}>
               <img src={PHOTO} alt="Portrait de Naji Youssef" style={{ width:"100%", height:"100%", objectFit:"cover", objectPosition:"center top", filter:photoHover?"brightness(1.06) contrast(1.04)":"brightness(1) contrast(1)", transition:"filter .4s" }} />
             </div>
 

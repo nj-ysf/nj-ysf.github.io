@@ -13,7 +13,7 @@ export const profile = {
   Facebook: { label: "fb:youssef",          url: "https://www.facebook.com/share/1BK9ctBfpt/" },
 
   available: true,
-  about: "Étudiant en 1ʳᵉ année du cycle ingénieur en Big Data & Cloud Computing à l\'ENSET Mohammedia. Titulaire d\'une licence en bases de données et développement. Passionné par l\'intelligence artificielle et l\'analyse de données — je recherche un stage pour contribuer à des projets concrets et innovants.",
+  about: "Second-year engineering student in Big Data & Cloud Computing at ENSET Mohammedia, holding a Bachelor's degree in Database and Software Development. Freelance Web Developer with experience in designing and developing modern web applications. Passionate about Artificial Intelligence, Web Development, and emerging technologies. Rigorous, curious, and highly motivated, with a strong willingness to learn and contribute to challenging projects.",
   stats: [
     { n: 7,  suffix: "+", label: "Projets"     },
     { n: 3,  suffix: "",  label: "Langues"      },
@@ -28,11 +28,34 @@ export const formation = [
   { year:"2020",     degree:"Baccalauréat",           field:"Sciences Physiques",                     school:"Lycée Moulay Abdellah, El Jadida",           note:"Mention Bien" },
 ];
 
+export const experience = [
+  {
+    role: "AI Engineer Intern",
+    organization: "ADNC Group",
+    period: "17/07/2026 - 02/08/2026",
+    points: [
+      "Integrated AI solutions into a real-world project in a production environment.",
+      "Contributed to the implementation and integration of AI-based functionalities.",
+      "Worked on integrating AI components into an existing software system.",
+    ],
+  },
+  {
+    role: "Backend Engineer Intern",
+    organization: "IT Department - Province of El Jadida",
+    period: "01/07/2025 - 15/07/2025",
+    points: [
+      "Developed backend functionalities using Django.",
+      "Contributed to the development of web application backend services.",
+      "Implemented backend features and application logic using Django.",
+    ],
+  },
+];
+
 export const skills = {
   "Langages":          ["Python","Java","JavaScript","PHP","C","HTML/CSS"],
-  "IA & Data Science": ["Machine Learning","PyTorch","OpenCV","Pandas","","numpy","matplotlib" , "seaborn"],
-  "Backend & BDD":     ["J2EE","API REST","MySQL","Oracle","Java Swing"],
-  "DevOps & Outils":   ["Git","GitHub"],
+  "IA & Data Science": ["Machine Learning","PyTorch","OpenCV","Pandas","numpy","matplotlib","seaborn","LangChain","LangGraph"],
+  "Backend & BDD":     ["J2EE","API REST","Django","MySQL","Oracle","Java Swing"],
+  "DevOps & Outils":   ["Git","GitHub","Docker"],
   "Soft Skills":       ["Résolution de problèmes","Travail en équipe","Apprentissage rapide"],
 };
 
@@ -45,13 +68,15 @@ export const skillColors = {
 };
 
 export const projects = [
-  { title:"Optimisation feux de circulation",   desc:"Algorithmes intelligents (Q-Learning, DQN, QMIX) pour optimiser les feux via simulations SUMO et PyTorch.", tags:["PyTorch","Q-Learning","DQN","SUMO"],repo:"https://github.com/nj-ysf" ,  year:"2024" },
-  { title:"FRS-Face-Recognition-System",        desc:"A comprehensive face recognition system built with Python, dlib, and OpenCV. This project implements real-time face detection and recognition capabilities, designed for attendance tracking and presence management systems..",        tags:["OpenCV","Dlib","Python" ] ,repo:"https://github.com/nj-ysf",            year:"2023" },
-  { title:"App Restaurant Java",                desc:"Gestion des plats, génération de factures, notifications e-mail et chatbot intégré.",                         tags:["Java Swing","SMTP","Chatbot"],     repo:"https://github.com/nj-ysf"  ,   year:"2023" },
-  { title:"Détection inondations",              desc:"Système intelligent d\'alerte précoce basé sur l\'analyse de données environnementales.",                    tags:["Python","ML","Data Analysis"],    repo:"https://github.com/nj-ysf" ,    year:"2023" },
-  { title:"Coffre-fort numérique sécurisé",       desc:"application web qui chiffre des messages avec AES-256 et les cache dans des images grâce à la stéganographie LSB, puis permet de les extraire, les déchiffrer et d’évaluer la qualité de l’image avec MSE et PSNR.",                          tags:["Python","Streamlit","numpy" , "Pillow"],repo:"https://github.com/nj-ysf",year:"2026"},
-   { title:"Élégance Émiratie — Site Web Complet",       desc:"Site web multi-pages pour une maison de haute couture émiratie fictive.Construit en HTML5 /CSS3 JavaScript vanilla — aucun framework requis",                          tags:["HTML5","CSS3", "JavaScript"], repo:"https://github.com/nj-ysf" ,year:"2024"},
-   { title:"ML_learning projects",       desc:"Un ensemble de mini-projets visant à appliquer les concepts fondamentaux du Machine Learning.",                          tags:["Linear Regression","Polynomial Regression", "Logistic Regression" , "K-Nearest Neighbors (KNN)" , "Support Vector Machine (SVM)" , "Decision Tree"], repo:"https://github.com/nj-ysf/ML_learning" ,year:"2026"},
+  { title:"MANTOUJI - Plateforme de valorisation des produits du terroir", desc:"Professional platform for promoting Moroccan local products, improving traceability, and connecting cooperatives with consumers. The project includes field research supported by bilingual Arabic/French NLP analysis to identify needs around traceability, review reliability, digital presence, and market access. Built with a modern architecture: documented FastAPI REST API with Swagger, Next.js / React frontend, PostgreSQL persistence with SQLAlchemy, and UML modeling.", tags:["Next.js","React","TypeScript","Tailwind CSS","FastAPI","SQLAlchemy","PostgreSQL","Swagger"], repo:"https://github.com/iamsernine/mantouji_backend", year:"Projet professionnel" },
+  { title:"Barber Analyzer - AI Vision Metadata Pipeline", desc:"AI vision pipeline for BarberChat that turns a haircut photo into multilingual search metadata. It uses Google Gemini 2.5 Flash with a constrained JSON schema, quality validation, keywords in English, French, Modern Standard Arabic, Darija, and Arabizi, plus a reliable fallback flow for backend integration.", tags:["Python","Gemini 2.5 Flash","google-genai","Docker","JSON Schema","AI Vision","Django","Celery"], repo:"https://github.com/nj-ysf/Keywords_geniration", year:"AI project" },
+  { title:"Optimisation feux de circulation",   desc:"Intelligent traffic light optimization using Q-Learning, DQN, and QMIX algorithms with SUMO simulations and PyTorch.", tags:["PyTorch","Q-Learning","DQN","SUMO"],repo:"https://github.com/nj-ysf" ,  year:"2024" },
+  { title:"FRS-Face-Recognition-System",        desc:"A comprehensive face recognition system built with Python, dlib, and OpenCV. This project implements real-time face detection and recognition capabilities, designed for attendance tracking and presence management systems.",        tags:["OpenCV","Dlib","Python" ] ,repo:"https://github.com/nj-ysf",            year:"2023" },
+  { title:"App Restaurant Java",                desc:"Restaurant management desktop application for managing dishes, generating invoices, sending email notifications, and using an integrated chatbot.",                         tags:["Java Swing","SMTP","Chatbot"],     repo:"https://github.com/nj-ysf"  ,   year:"2023" },
+  { title:"Détection inondations",              desc:"Intelligent early-warning system for flood detection based on environmental data analysis.",                    tags:["Python","ML","Data Analysis"],    repo:"https://github.com/nj-ysf" ,    year:"2023" },
+  { title:"Coffre-fort numérique sécurisé",       desc:"Secure web application that encrypts messages with AES-256 and hides them inside images using LSB steganography, then extracts and decrypts them while evaluating image quality with MSE and PSNR.",                          tags:["Python","Streamlit","numpy" , "Pillow"],repo:"https://github.com/nj-ysf",year:"2026"},
+   { title:"Élégance Émiratie — Site Web Complet",       desc:"Multi-page website for a fictional Emirati haute couture brand, built with HTML5, CSS3, and vanilla JavaScript without any framework.",                          tags:["HTML5","CSS3", "JavaScript"], repo:"https://github.com/nj-ysf" ,year:"2024"},
+   { title:"ML_learning projects",       desc:"Collection of mini-projects focused on applying core Machine Learning concepts through practical implementations.",                          tags:["Linear Regression","Polynomial Regression", "Logistic Regression" , "K-Nearest Neighbors (KNN)" , "Support Vector Machine (SVM)" , "Decision Tree"], repo:"https://github.com/nj-ysf/ML_learning" ,year:"2026"},
 ];
 
 

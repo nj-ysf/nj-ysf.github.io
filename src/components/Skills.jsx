@@ -11,7 +11,7 @@ export default function Skills() {
     <section id="skills" aria-labelledby="skills-heading">
       <div className="section-wrap">
         <FadeIn>
-          <Eyebrow>03 — Compétences</Eyebrow>
+          <Eyebrow>04 — Compétences</Eyebrow>
           <SectionHeading id="skills-heading">Savoir-faire techniques</SectionHeading>
         </FadeIn>
 

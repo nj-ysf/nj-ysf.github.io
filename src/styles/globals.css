@@ -124,28 +124,208 @@ body {
 }
 .hero-photo-outer { position: relative; flex-shrink: 0; }
 
+.experience-wrap {
+  padding-top: 2rem;
+}
+
+.experience-list {
+  display: grid;
+  gap: .85rem;
+}
+
+.experience-card {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.experience-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1.2rem;
+}
+
+.experience-card-copy {
+  min-width: 0;
+}
+
+.experience-role {
+  font-family: var(--font-display);
+  font-size: clamp(1rem, 2vw, 1.25rem);
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.2;
+  margin-bottom: .25rem;
+}
+
+.experience-org {
+  font-family: var(--font-mono);
+  font-size: .7rem;
+  color: var(--accent);
+  letter-spacing: .06em;
+  text-transform: uppercase;
+}
+
+.experience-meta {
+  display: flex;
+  align-items: center;
+  gap: .7rem;
+  flex-shrink: 0;
+  font-family: var(--font-mono);
+  font-size: .68rem;
+  color: var(--muted);
+}
+
+.experience-toggle {
+  display: inline-grid;
+  place-items: center;
+  width: 1.45rem;
+  height: 1.45rem;
+  border: 1px solid rgba(56,189,248,.14);
+  border-radius: 50%;
+  color: var(--gold-light);
+}
+
+.experience-points {
+  display: grid;
+  gap: .55rem;
+  padding-left: 1rem;
+  color: var(--sub);
+  font-size: .9rem;
+  line-height: 1.65;
+}
+
+.experience-points li::marker {
+  color: var(--gold-light);
+}
+
 @media (max-width: 640px) {
+  .hero-section {
+    min-height: auto !important;
+    align-items: flex-start !important;
+    padding: 5.75rem 1.25rem 3.75rem !important;
+  }
   .hero-grid {
     grid-template-columns: 1fr !important;
-    gap: 2rem;
+    justify-items: center;
+    gap: 1.75rem;
+    text-align: center;
+  }
+  .hero-grid > div:last-child {
+    order: -1;
+  }
+  .hero-grid h1 {
+    font-size: clamp(2rem, 9vw, 2.35rem) !important;
+    letter-spacing: 0 !important;
+  }
+  .hero-grid p {
+    max-width: 100% !important;
+    overflow-wrap: anywhere;
   }
   .hero-photo-outer {
     display: flex;
     justify-content: center;
+    width: min(58vw, 190px);
+    margin: 0 auto .25rem;
     order: -1;
   }
-  .hero-photo-outer > div {
-    width: 160px !important;
-    height: 160px !important;
+  .hero-photo-ring {
+    inset: -9px !important;
   }
-  .hero-cta  { justify-content: center !important; }
-  .hero-stats { justify-content: center !important; }
+  .hero-photo-frame {
+    width: clamp(138px, 48vw, 170px) !important;
+    height: clamp(138px, 48vw, 170px) !important;
+  }
+  .hero-photo-outer > div:nth-child(n+3) {
+    max-width: 48vw;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: .54rem !important;
+    padding: .32rem .5rem !important;
+    border-radius: 6px !important;
+  }
+  .hero-photo-outer > div:nth-child(3) {
+    top: -4% !important;
+    right: -10% !important;
+  }
+  .hero-photo-outer > div:nth-child(4) {
+    bottom: 2% !important;
+    left: -10% !important;
+  }
+  .hero-cta  {
+    justify-content: center !important;
+    margin-bottom: 2rem !important;
+  }
+  .hero-cta > a {
+    flex: 1 1 100%;
+    justify-content: center;
+    max-width: 17rem;
+  }
+  .hero-stats {
+    justify-content: center !important;
+    gap: 1.3rem !important;
+    width: 100%;
+  }
+  .hero-stats > div {
+    min-width: 72px;
+  }
 }
 
 /* ── Contact bubbles ── */
+@media (max-width: 760px) {
+  .experience-card-header {
+    flex-direction: column;
+    gap: .75rem;
+  }
+  .experience-meta {
+    justify-content: space-between;
+    width: 100%;
+  }
+  .experience-points {
+    padding-left: 1.1rem;
+    font-size: .84rem;
+  }
+  .bubble-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+    gap: .65rem !important;
+    padding: .65rem !important;
+  }
+  .contact-bubble-card {
+    min-width: 0;
+    padding: 1.15rem .65rem !important;
+  }
+  .contact-bubble-icon {
+    width: 54px !important;
+    height: 54px !important;
+  }
+  .contact-bubble-value {
+    max-width: 100% !important;
+  }
+  .contact-copy-row {
+    display: flex;
+    justify-content: center;
+  }
+}
+
 @media (max-width: 480px) {
   .bubble-grid {
-    grid-template-columns: repeat(3, 1fr) !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    gap: .5rem !important;
+    border-radius: 8px !important;
+  }
+  .contact-bubble-card {
+    padding: 1rem .45rem !important;
+    gap: .5rem !important;
+  }
+  .contact-bubble-icon {
+    width: 48px !important;
+    height: 48px !important;
+  }
+  .contact-bubble-value {
+    font-size: .68rem !important;
+    white-space: normal !important;
+    overflow-wrap: anywhere;
   }
 }
 

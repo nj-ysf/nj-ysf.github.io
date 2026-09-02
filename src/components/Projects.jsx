@@ -54,7 +54,7 @@ export default function Projects() {
     <section id="projects" aria-labelledby="projects-heading">
       <div className="section-wrap">
         <FadeIn>
-          <Eyebrow>04 — Projets</Eyebrow>
+          <Eyebrow>05 — Projets</Eyebrow>
           <SectionHeading id="projects-heading">Projets académiques</SectionHeading>
         </FadeIn>
 

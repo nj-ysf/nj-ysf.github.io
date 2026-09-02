@@ -67,6 +67,7 @@ function BubbleCard({ item }) {
 
   return (
     <a
+      className="contact-bubble-card"
       href={item.href}
       target={item.ext ? "_blank" : undefined}
       rel={item.ext ? "noopener noreferrer" : undefined}
@@ -86,7 +87,7 @@ function BubbleCard({ item }) {
       }}
     >
       {/* Bubble */}
-      <div style={{
+      <div className="contact-bubble-icon" style={{
         width: 64,
         height: 64,
         borderRadius: "50%",
@@ -105,7 +106,7 @@ function BubbleCard({ item }) {
 
       {/* Label */}
       <div style={{ textAlign: "center" }}>
-        <p style={{
+        <p className="contact-bubble-value" style={{
           fontFamily: "var(--font-mono)",
           fontSize: ".65rem",
           letterSpacing: ".1em",
@@ -148,7 +149,7 @@ export default function Contact() {
     <section id="contact" aria-labelledby="contact-heading">
       <div className="section-wrap" style={{ paddingBottom: "7rem" }}>
         <FadeIn>
-          <Eyebrow>05 — Contact</Eyebrow>
+          <Eyebrow>06 — Contact</Eyebrow>
           <SectionHeading id="contact-heading">Prendre contact</SectionHeading>
 
         </FadeIn>
@@ -180,9 +181,11 @@ export default function Contact() {
 
         {/* Copy email */}
         <FadeIn delay={400}>
+          <div className="contact-copy-row">
           <GhostBtn onClick={copy}>
             {copied ? "✓ Copié !" : "Copier l'e-mail"}
           </GhostBtn>
+          </div>
         </FadeIn>
 
         {/* Activities */}
