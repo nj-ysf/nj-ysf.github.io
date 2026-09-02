@@ -22,7 +22,7 @@ export const profile = {
 };
 
 export const formation = [
-  { year:"En cours", degree:"Diplôme d\'Ingénieur", field:"Big Data & Cloud Computing",             school:"ENSET Mohammedia",                          note:"1ʳᵉ année du cycle ingénieur en Ingénierie Informatique" },
+  { year:"En cours", degree:"Diplôme d\'Ingénieur", field:"Big Data & Cloud Computing",             school:"ENSET Mohammedia",                          note:"2ᵉ année du cycle ingénieur en Ingénierie Informatique" },
   { year:"2024",     degree:"Licence",               field:"Bases de données et Développement",      school:"Université Chouaib Doukkali, El Jadida",     note:"Spécialisation en conception et développement de systèmes" },
   { year:"2022",     degree:"DEUG",                  field:"Sciences Mathématiques et Informatique", school:"Université Chouaib Doukkali, El Jadida",     note:"Fondamentaux en mathématiques et informatique" },
   { year:"2020",     degree:"Baccalauréat",           field:"Sciences Physiques",                     school:"Lycée Moulay Abdellah, El Jadida",           note:"Mention Bien" },
